@@ -1,0 +1,35 @@
+actions to be automated:
+
+1. move to market from spawn and open market (5 versions) ------ doable
+    LY
+    BW
+    TF
+    ML
+    FS
+3. set category resources ------ doable
+repeats for all items:
+[
+4. click on the search bar, read from google sheet and input item name into the search bar ------ doable
+6. click on buy button ------ doable
+7. extract required data and update google sheet ------ doable
+8. close the modal of item ------ doable
+]
+9. close market ------ doable
+10. move from market to teleport guy (5 versions) ------ doable
+    LY
+    BW
+    TF
+    ML
+    FS
+11. click on teleport guy, open dropdown ------ doable
+12. select city from opened dropdown (5 versions) ------ doable
+    LY
+    BW
+    TF
+    ML
+    FS
+13. hit buy journey button ------ doable
+14. identify whether the black screen is gone or not, very important ------ doable
+
+
+
