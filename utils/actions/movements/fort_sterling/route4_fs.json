@@ -1,0 +1,41 @@
+[
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      3060.07421875,
+      498.84765625
+    ],
+    "duration": 0.835,
+    "pause_before": 1.218
+  },
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      3079.0234375,
+      292.34375
+    ],
+    "duration": 2.331,
+    "pause_before": 1.932
+  },
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      3106.12109375,
+      627.06640625
+    ],
+    "duration": 0.633,
+    "pause_before": 4.367
+  },
+  {
+    "action": "click",
+    "button": "left",
+    "pos": [
+      2805.484375,
+      442.73828125
+    ],
+    "pause_before": 1.831
+  }
+]

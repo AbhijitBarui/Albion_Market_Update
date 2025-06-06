@@ -1,0 +1,22 @@
+[
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      2369.04296875,
+      741.30859375
+    ],
+    "duration": 6.393,
+    "pause_before": 2.058
+  },
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      2643.91015625,
+      271.48828125
+    ],
+    "duration": 0.844,
+    "pause_before": 2.475
+  }
+]
