@@ -1,25 +1,50 @@
 import re
 import pyautogui
 import pytesseract
-from PIL import Image
+from PIL import Image, ImageEnhance, ImageFilter
+
+OCR_CONFIG = "--psm 7 -c tessedit_char_whitelist=0123456789"
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────────
-# Adjust screen coordinates (full-screen resolution assumed)
-SELL_TOP_REGION = (2749, 403, 41, 15)
+SELL_TOP_REGION = (2746, 403, 45, 15)
 BUY_TOP_REGION  = (2912, 403, 41, 15)
 
-# Tesseract OCR mode (only digits)
-OCR_CONFIG = "--psm 7 digits"
 
-def read_price(region):
+def read_price(region, debug=True):
     """
-    Captures screenshot from `region`, applies OCR, and returns the first integer found.
+    Captures screenshot from `region`, enhances image, applies OCR,
+    and returns the first integer found. Optionally saves debug images.
     """
-    screenshot: Image.Image = pyautogui.screenshot(region=region)
-    gray = screenshot.convert("L")
-    text = pytesseract.image_to_string(gray, config=OCR_CONFIG)
+    # 1. Screenshot and grayscale
+    screenshot = pyautogui.screenshot(region=region).convert("L")
+
+    # 2. Upscale by 4x
+    upscale = screenshot.resize((screenshot.width * 4, screenshot.height * 4), Image.LANCZOS)
+
+    # 3. Sharpen + contrast boost
+    sharpened = upscale.filter(ImageFilter.SHARPEN)
+    contrast = ImageEnhance.Contrast(sharpened).enhance(3.0)
+
+    # 4. Binarize and convert to grayscale again
+    threshold = 140
+    binary_bw = contrast.point(lambda x: 255 if x > threshold else 0, mode='1')
+    binary = binary_bw.convert("L")  # Ensure it's in correct mode for Tesseract
+
+    # 5. Debug output
+    if debug:
+        screenshot.save("debug_raw.png")
+        upscale.save("debug_upscaled.png")
+        contrast.save("debug_contrast.png")
+        binary.save("debug_binary.png")
+
+    # 6. OCR
+    text = pytesseract.image_to_string(binary, config=OCR_CONFIG)
+    print(f"OCR Text Output: {repr(text)}")  # Debug log
+
+    # 7. Extract digits
     match = re.search(r"(\d+)", text)
     return int(match.group(1)) if match else None
+
 
 def get_adjusted_price(mode: str):
     """

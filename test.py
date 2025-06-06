@@ -13,6 +13,9 @@ city_sequence = ["lymhurst", "bridgewatch", "martlock", "thetford", "fort_sterli
 
 if __name__ == "__main__":
 
+    price = get_adjusted_price('sell')
+    print(price)
+
     price = get_adjusted_price('buy')
     print(price)
 
