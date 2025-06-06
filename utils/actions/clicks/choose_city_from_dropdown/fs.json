@@ -1,0 +1,20 @@
+[
+  {
+    "action": "click",
+    "button": "left",
+    "pos": [
+      2295.5390625,
+      403.55078125
+    ],
+    "pause_before": 1.618
+  },
+  {
+    "action": "click",
+    "button": "left",
+    "pos": [
+      2234.625,
+      474.734375
+    ],
+    "pause_before": 3.469
+  }
+]

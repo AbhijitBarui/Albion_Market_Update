@@ -86,5 +86,43 @@ def monitor_avatar_via_text():
         print("\n⏹ Monitoring stopped by user. Exiting.")
 
 
-if __name__ == "__main__":
-    monitor_avatar_via_text()
+# if __name__ == "__main__":
+#     monitor_avatar_via_text()
+
+
+def wait_until_avatar_visible(min_duration=5, timeout=60):
+    """
+    Returns True if avatar is continuously visible (via text OCR) for at least `min_duration` seconds.
+    Returns False if timeout (default 60s) is hit without satisfying the condition.
+    Can be polled or used in blocking loops.
+    """
+    print(f"🔎 Waiting for avatar to be visible for at least {min_duration} seconds...")
+
+    start_time = None
+    deadline = time.time() + timeout
+
+    while time.time() < deadline:
+        try:
+            found = is_avatar_present_by_text()
+        except Exception as e:
+            print(f"[{time.strftime('%H:%M:%S')}] ❌ OCR error: {e}")
+            found = False
+
+        now = time.time()
+
+        if found:
+            if start_time is None:
+                start_time = now
+                print(f"[{time.strftime('%H:%M:%S')}] ✅ Avatar appeared — starting timer.")
+            elif now - start_time >= min_duration:
+                print(f"[{time.strftime('%H:%M:%S')}] ✅ Avatar confirmed present for {min_duration} seconds.")
+                return True
+        else:
+            if start_time is not None:
+                print(f"[{time.strftime('%H:%M:%S')}] ⚠️ Avatar disappeared — resetting timer.")
+            start_time = None
+
+        time.sleep(POLL_INTERVAL)
+
+    print(f"[{time.strftime('%H:%M:%S')}] ❌ Timeout reached without stable avatar detection.")
+    return False

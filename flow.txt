@@ -1,0 +1,17 @@
+1. user gets teleported manually to lymhurst city
+2. main script started
+3. char moves from spawn to market entrance and zones in
+4. transition checker holds functions until zone loads
+5. char moves from gate to trader and accesses market
+6. script pulls itemlist from sheet and runs a loop
+7. each loop: itemname in search box
+8. each loop: click on buy
+9. each loop: extract values required
+10. each loop: update values after computation to sheets
+11. each loop: closes item buy modal
+12. after all item iterations close market
+13. char moves from trader to market gate
+14. transition checker holds functions until zone loads
+15. char moves from market gate to traveler guy and opens travel planner
+16. script clicks on dropdown and selects next city and presses buy journey
+17. similar to above steps...

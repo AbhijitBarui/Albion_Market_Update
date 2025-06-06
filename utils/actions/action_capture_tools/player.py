@@ -54,7 +54,7 @@ def on_start(x, y, button, pressed):
 
 if __name__ == "__main__":
     # 1) Load recorded actions from JSON
-    fname = "route.json"
+    fname = "route4_ly_mkt_to_ly_spw.json"
     with open(fname, "r") as f:
         actions = json.load(f)
 
