@@ -3,7 +3,7 @@
 import time
 import pyautogui
 
-SEARCH_BOX_COORDS = (2515, 385)
+SEARCH_BOX_COORDS = (2515, 340)
 PAUSE_AFTER_CLICK = 0.3
 TYPING_INTERVAL = 0.08
 

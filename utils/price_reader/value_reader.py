@@ -5,8 +5,8 @@ from PIL import Image
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────────
 # Adjust screen coordinates (full-screen resolution assumed)
-SELL_TOP_REGION = (2749, 447, 41, 15)
-BUY_TOP_REGION  = (2912, 447, 41, 15)
+SELL_TOP_REGION = (2749, 403, 41, 15)
+BUY_TOP_REGION  = (2912, 403, 41, 15)
 
 # Tesseract OCR mode (only digits)
 OCR_CONFIG = "--psm 7 digits"

@@ -12,6 +12,7 @@ import time
 city_sequence = ["lymhurst", "bridgewatch", "martlock", "thetford", "fort_sterling", "lymhurst"]
 
 if __name__ == "__main__":
+
     # signal to start
     wait_for_right_click()
 

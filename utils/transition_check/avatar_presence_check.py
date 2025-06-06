@@ -9,7 +9,7 @@ from PIL import Image
 
 # 1. The region (left_x, top_y, width, height) that tightly encloses the character name.
 #    We assume the capitalized name “Operate” lives here in full‐desktop coords:
-TEXT_REGION = (2145, 223, 95, 23)
+TEXT_REGION = (2145, 183, 95, 23)
 
 # 2. Poll interval (seconds)
 POLL_INTERVAL = 0.5

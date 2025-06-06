@@ -3,20 +3,25 @@
     "action": "hold",
     "button": "right",
     "pos": [
-      2189.375,
-      309.94921875
+      2273.40625,
+      316.125
     ],
-    "duration": 1.022,
-    "pause_before": 1.553
+    "duration": 1.536,
+    "pause_before": 4.557
   },
   {
     "action": "hold",
     "button": "right",
     "pos": [
-      2637.96875,
-      383.953125
+      2658.61328125,
+      310.9921875
     ],
-    "duration": 0.161,
-    "pause_before": 3.712
+    "duration": 0.448,
+    "pause_before": 3.304
+  },
+  {
+    "action": "type",
+    "char": "c",
+    "pause_before": 3.009
   }
 ]
