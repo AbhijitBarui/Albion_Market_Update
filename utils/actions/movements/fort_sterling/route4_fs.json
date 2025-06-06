@@ -3,39 +3,54 @@
     "action": "hold",
     "button": "right",
     "pos": [
-      3060.07421875,
-      498.84765625
+      3077.59765625,
+      501.15234375
     ],
-    "duration": 0.835,
-    "pause_before": 1.218
+    "duration": 0.674,
+    "pause_before": 0.939
   },
   {
     "action": "hold",
     "button": "right",
     "pos": [
-      3079.0234375,
-      292.34375
+      3091.6484375,
+      273.47265625
     ],
-    "duration": 2.331,
-    "pause_before": 1.932
+    "duration": 2.528,
+    "pause_before": 1.622
   },
   {
     "action": "hold",
     "button": "right",
     "pos": [
-      3106.12109375,
-      627.06640625
+      3052.09765625,
+      358.55859375
     ],
-    "duration": 0.633,
-    "pause_before": 4.367
+    "duration": 0.327,
+    "pause_before": 2.869
+  },
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      3018.23046875,
+      528.828125
+    ],
+    "duration": 0.211,
+    "pause_before": 1.693
   },
   {
     "action": "click",
     "button": "left",
     "pos": [
-      2805.484375,
-      442.73828125
+      2798.53125,
+      345.82421875
     ],
-    "pause_before": 1.831
+    "pause_before": 9.317
+  },
+  {
+    "action": "type",
+    "char": "c",
+    "pause_before": 1.692
   }
 ]

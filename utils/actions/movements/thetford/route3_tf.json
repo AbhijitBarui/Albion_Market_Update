@@ -3,20 +3,20 @@
     "action": "hold",
     "button": "right",
     "pos": [
-      2347.1484375,
-      329.55859375
+      2325.0390625,
+      301.59375
     ],
-    "duration": 2.337,
-    "pause_before": 5.185
+    "duration": 2.293,
+    "pause_before": 3.099
   },
   {
     "action": "hold",
     "button": "right",
     "pos": [
-      2490.8125,
-      324.19140625
+      2547.5625,
+      262.796875
     ],
-    "duration": 0.215,
-    "pause_before": 3.193
+    "duration": 0.447,
+    "pause_before": 2.686
   }
 ]

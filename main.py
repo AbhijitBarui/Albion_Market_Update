@@ -10,21 +10,22 @@ import time
 
 
 city_sequence = ["lymhurst", "bridgewatch", "martlock", "thetford", "fort_sterling", "lymhurst"]
+city_sequence = ["thetford", "fort_sterling", "lymhurst"]
 
 if __name__ == "__main__":
 
-    # signal to start
+    # ---------------------- signal to start
     wait_for_right_click()
 
-    # looping each city
+    # ---------------------- looping each city
     for i in range(len(city_sequence) - 1):
         city = city_sequence[i]
         next_city = city_sequence[i + 1]
 
-        # spawn to market entry
+        # ---------------------- spawn to market entry
         resolve_route_path(city, "spawn_to_market")
 
-        # check if zoned in
+        # ---------------------- check if zoned in
         time.sleep(5)
         if wait_until_avatar_visible(min_duration=5, timeout = 60):
             print("Ready to proceed.")
@@ -32,10 +33,10 @@ if __name__ == "__main__":
             print("Avatar never stabilized. Check loading or region.")
             exit()
 
-        # entrance to market
+        # ---------------------- entrance to market
         resolve_route_path(city, "market_to_trader")
 
-        # market scanning
+        # ---------------------- market scanning
         resolve_cta_clicks("set_category")
         
         item_data = read_items_and_modes_from_sheet()
@@ -61,13 +62,13 @@ if __name__ == "__main__":
             resolve_cta_clicks("close_buy_modal")
             write_value_to_cell(row_index=row_number, col_index=col_number, value_to_write=price)
 
-        # close market
+        # ---------------------- close market
         resolve_cta_clicks("close_market")
 
-        # market to city
+        # ---------------------- market to city
         resolve_route_path(city, "trader_to_city")
 
-        # check if zoned out
+        # ---------------------- check if zoned out
         time.sleep(5)
         if wait_until_avatar_visible(min_duration=5, timeout = 60):
             print("Ready to proceed.")
@@ -75,13 +76,13 @@ if __name__ == "__main__":
             print("Avatar never stabilized. Check loading or region.")
             exit()
 
-        # city to travel planner
+        # ---------------------- city to travel planner
         resolve_route_path(city, "city_to_travel_planner")
 
-        # select city from dropdown
+        # ---------------------- select city from dropdown
         resolve_cta_clicks(next_city)
 
-        # buy travel
+        # ---------------------- buy travel
         resolve_cta_clicks("buy_travel")
         time.sleep(10)
 

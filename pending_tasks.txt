@@ -1,2 +1,0 @@
-1. choose city from dd jsons for cities except bw
-2. price reader not working, test well

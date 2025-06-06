@@ -9,26 +9,21 @@ import time
 
 
 
-city_sequence = ["lymhurst", "bridgewatch", "martlock", "thetford", "fort_sterling", "lymhurst"]
+city_sequence = ["martlock", "thetford", "fort_sterling", "lymhurst"]
 
 if __name__ == "__main__":
 
-    price = get_adjusted_price('sell')
-    print(price)
-
-    price = get_adjusted_price('buy')
-    print(price)
 
     # # signal to start
     # wait_for_right_click()
 
-    # # looping each city
-    # for i in range(len(city_sequence) - 1):
-    #     city = city_sequence[i]
-    #     next_city = city_sequence[i + 1]
+    # looping each city
+    for i in range(len(city_sequence) - 1):
+        city = city_sequence[i]
+        next_city = city_sequence[i + 1]
 
-    #     # spawn to market entry
-    #     resolve_route_path(city, "spawn_to_market")
+        # spawn to market entry
+        resolve_route_path(city, "spawn_to_market")
 
     #     # check if zoned in
     #     time.sleep(5)

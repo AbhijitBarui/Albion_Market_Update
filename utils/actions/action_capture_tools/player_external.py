@@ -105,6 +105,7 @@ def resolve_cta_clicks(action_type):
         "fort_sterling": "choose_city_from_dropdown/fs",
         "thetford": "choose_city_from_dropdown/tf",
         "martlock": "choose_city_from_dropdown/ml",
+        "lymhurst": "choose_city_from_dropdown/ly",
         "close_market": "close_market/close_market",
         "buy": "hit_buy/hit_buy",
         "set_category": "set_category/choose_category_resource",

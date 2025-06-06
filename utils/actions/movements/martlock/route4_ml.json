@@ -3,29 +3,39 @@
     "action": "hold",
     "button": "right",
     "pos": [
-      3225.6015625,
-      433.36328125
+      3103.98046875,
+      433.12109375
     ],
-    "duration": 1.74,
-    "pause_before": 1.234
+    "duration": 0.743,
+    "pause_before": 1.078
   },
   {
     "action": "hold",
     "button": "right",
     "pos": [
-      3104.8359375,
-      331.64453125
+      3149.58203125,
+      300.703125
     ],
-    "duration": 0.587,
-    "pause_before": 3.358
+    "duration": 2.618,
+    "pause_before": 2.194
+  },
+  {
+    "action": "hold",
+    "button": "right",
+    "pos": [
+      3018.6328125,
+      409.56640625
+    ],
+    "duration": 0.275,
+    "pause_before": 2.773
   },
   {
     "action": "click",
     "button": "left",
     "pos": [
-      2884.05859375,
-      427.29296875
+      2781.01953125,
+      376.66796875
     ],
-    "pause_before": 7.29
+    "pause_before": 2.683
   }
 ]
