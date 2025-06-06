@@ -107,7 +107,7 @@ def resolve_cta_clicks(action_type):
         "martlock": "choose_city_from_dropdown/ml",
         "close_market": "close_market/close_market",
         "buy": "hit_buy/hit_buy",
-        "set_category": "choose_category_resource",
+        "set_category": "set_category/choose_category_resource",
         "buy_travel": "buy_travel/buy_travel",
         "close_buy_modal": "close_buy_modal/close_buy_modal"
     }

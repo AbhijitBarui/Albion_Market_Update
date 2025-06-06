@@ -3,18 +3,18 @@
     "action": "click",
     "button": "left",
     "pos": [
-      2257.6640625,
-      402.671875
+      2235.2109375,
+      401.7421875
     ],
-    "pause_before": 5.88
+    "pause_before": 1.518
   },
   {
     "action": "click",
     "button": "left",
     "pos": [
-      2220.55859375,
-      495.14453125
+      2222.3046875,
+      480.30078125
     ],
-    "pause_before": 4.362
+    "pause_before": 0.994
   }
 ]
