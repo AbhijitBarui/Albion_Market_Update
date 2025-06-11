@@ -10,7 +10,7 @@ import time
 
 
 city_sequence = ["lymhurst", "bridgewatch", "martlock", "thetford", "fort_sterling", "lymhurst"]
-city_sequence = ["thetford", "fort_sterling", "lymhurst"]
+# city_sequence = ["martlock", "thetford", "fort_sterling", "lymhurst"]
 
 if __name__ == "__main__":
 
@@ -60,7 +60,12 @@ if __name__ == "__main__":
             price = get_adjusted_price(mode)
             row_number = idx
             resolve_cta_clicks("close_buy_modal")
-            write_value_to_cell(row_index=row_number, col_index=col_number, value_to_write=price)
+            try:
+                write_value_to_cell(row_index=row_number, col_index=col_number, value_to_write=price)
+            except Exception as e:
+                print(f"⚠️  Skipped writing to row {row_number}, col {col_number} — {e}")
+
+            # write_value_to_cell(row_index=row_number, col_index=col_number, value_to_write=price)
 
         # ---------------------- close market
         resolve_cta_clicks("close_market")
